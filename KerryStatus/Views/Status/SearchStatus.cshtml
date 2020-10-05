@@ -1,0 +1,31 @@
+﻿@model KerryStatus.Models.KEM.kem_gateway_bill_status
+@{
+    ViewBag.Title = "billStatus";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bill Status</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ResultSearchStatus", "Status", FormMethod.Post))
+        {
+            <div>
+                <div class="col-12 text-center">
+                    <br />
+                    <p > <h3 style="font-size: 38px; color: darkorange;">SỐ VẬN ĐƠN</h3> </p>
+                    @*@Html.TextBoxFor(x => x.so_van_don)*@
+                </div>
+                <div class="col-12 text-center">
+                    @Html.TextBoxFor(x => x.so_van_don, new {placeholder="Số vận đơn VD: PC0123456789", style = "width:600PX;"})
+                </div>
+                <div class="col-12 text-center">
+                    <br />
+                    <span style="font-size: 20PX;font-weight: bold; color: darkorange; background-color: black"> <input class="form-control center-block" type="submit" name="TimKiem" value="Tìm kiếm" /> </span> 
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

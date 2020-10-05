@@ -1,0 +1,51 @@
+﻿@model List<KerryStatus.Models.KEM.kem_gateway_bill_status>
+@{
+    ViewBag.Title = "listStatus";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <td> Số vận đơn </td>
+                    <td> Mã khách hàng </td>
+                    <td> Mã trạng thái </td>
+                    <td> Thời gian thực tế </td>
+                    <td> Thời gian khởi tạo </td>
+                    <td> Thời gian đồng bộ qua KH </td>
+                    <td> Người tạo </td>
+                    <td> Ghi chú </td>
+
+                </tr>
+                @*@foreach (var item in Model)
+                {
+                    <tr>
+                        <td> @item.so_van_don </td>
+                        <td> @item.ma_kh </td>
+                        <td> @item.ma_trang_thai </td>
+                        <td> @item.time_status </td>
+                        <td> @item.sys_createdate </td>
+                        <td> @item.sys_updatedate </td>
+                        <td> @item.sys_createby </td>
+                        <td> @Url.Action("ShowWaybill","nc_bill", new { id = item.so_van_don })Detail </td>
+                    </tr>
+                }*@
+                @Html.Action("_PartialListStatus", "Status")
+            </tbody>
+
+        </table>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Quay lại tìm kiếm", "SearchStatus", "Status")</li>
+                @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

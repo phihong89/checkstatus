@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KEMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'KEM.dbo.kem_gateway_bill_status' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="kem_gateway_bill_status">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="so_lan" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="so_van_don" Type="nvarchar" MaxLength="20" />
+    <Property Name="ma_trang_thai" Type="nvarchar" MaxLength="10" />
+    <Property Name="ma_kh" Type="nvarchar" MaxLength="10" />
+    <Property Name="created" Type="datetime" />
+    <Property Name="ghi_chu" Type="nvarchar" MaxLength="300" />
+    <Property Name="so_lan" Type="int" Nullable="false" />
+    <Property Name="sync" Type="int" />
+    <Property Name="sync_ems" Type="int" />
+    <Property Name="sync_orc" Type="int" />
+    <Property Name="time_status" Type="datetime" />
+    <Property Name="sys_active" Type="bit" />
+    <Property Name="sys_delete" Type="bit" />
+    <Property Name="sys_createdate" Type="datetime" />
+    <Property Name="sys_updatedate" Type="datetime" />
+    <Property Name="sys_createby" Type="int" />
+    <Property Name="sys_updateby" Type="int" />
+    <Property Name="type" Type="int" />
+    <Property Name="sync_kes" Type="int" />
+    <Property Name="ma_nv_nhan" Type="nvarchar" MaxLength="250" />
+    <Property Name="ma_nv_giao" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'KEM.dbo.kem_gateway_cuoc_phi_log' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="kem_gateway_cuoc_phi_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="so_van_don" Type="nvarchar" MaxLength="20" />
+    <Property Name="cuoc" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="phi" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="phi_vung_xa" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="phi_kien_go" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="phi_kiem_dem" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="khoi_luong" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ma_kh" Type="nvarchar" MaxLength="10" />
+    <Property Name="type" Type="int" />
+    <Property Name="sync_status" Type="nvarchar" MaxLength="20" />
+    <Property Name="sync_orc" Type="int" />
+    <Property Name="sys_createdate" Type="datetime" />
+    <Property Name="sync_kes" Type="int" />
+    <Property Name="others_fee" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="note" Type="ntext" />
+    <Property Name="note_1" Type="ntext" />
+  </EntityType>
+  <EntityType Name="kem_gateway_reponse_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="so_van_don" Type="nvarchar" MaxLength="25" />
+    <Property Name="khoi_luong" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="cuoc" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="phi" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ma_trang_thai" Type="nvarchar" MaxLength="10" />
+    <Property Name="response_code" Type="nvarchar" MaxLength="50" />
+    <Property Name="time_status" Type="datetime" />
+    <Property Name="response_log" Type="ntext" />
+    <Property Name="data" Type="ntext" />
+    <Property Name="message" Type="ntext" />
+    <Property Name="sys_createdate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'KEM.dbo.nc_bill' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="nc_bill">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="waybill_number" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="waybill_number" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="ref_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="order_number_supper" Type="nvarchar" MaxLength="50" />
+    <Property Name="customer_code" Type="nvarchar" MaxLength="20" />
+    <Property Name="sender_province" Type="nvarchar" MaxLength="5" />
+    <Property Name="sender_district" Type="nvarchar" MaxLength="10" />
+    <Property Name="sender_ward" Type="nvarchar" MaxLength="100" />
+    <Property Name="sender_address" Type="nvarchar" MaxLength="255" />
+    <Property Name="sender_contact" Type="nvarchar" MaxLength="255" />
+    <Property Name="sender_phone" Type="nvarchar" MaxLength="100" />
+    <Property Name="receiver_province" Type="nvarchar" MaxLength="5" />
+    <Property Name="receiver_district" Type="nvarchar" MaxLength="10" />
+    <Property Name="receiver_ward" Type="nvarchar" MaxLength="100" />
+    <Property Name="receiver_address" Type="nvarchar" MaxLength="255" />
+    <Property Name="receiver_contact" Type="nvarchar" MaxLength="255" />
+    <Property Name="receiver_phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="receiver_name" Type="nvarchar" MaxLength="255" />
+    <Property Name="cod" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="height" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="length" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="width" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="no_parcels" Type="int" />
+    <Property Name="no_parcels_doc" Type="int" />
+    <Property Name="weight" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="weight_conversion" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="remark" Type="nvarchar" MaxLength="2000" />
+    <Property Name="remote_cost" Type="decimal" Precision="10" Scale="0" />
+    <Property Name="woodbaler_cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="double_check_cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="insurance_cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="other_cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="service" Type="nvarchar" MaxLength="10" />
+    <Property Name="payment_type" Type="nvarchar" MaxLength="10" />
+    <Property Name="nv_nhan" Type="nvarchar" MaxLength="10" />
+    <Property Name="shop_code" Type="nvarchar" MaxLength="50" />
+    <Property Name="table" Type="smallint" />
+    <Property Name="sender_customer_code" Type="nvarchar" MaxLength="10" />
+    <Property Name="receiver_customer_code" Type="nvarchar" MaxLength="10" />
+    <Property Name="customer_code_api" Type="nvarchar" MaxLength="10" />
+    <Property Name="declare_value" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="order_type" Type="smallint" />
+    <Property Name="special_cost" Type="smallint" />
+    <Property Name="sys_createdate" Type="datetime" />
+    <Property Name="sys_updatedate" Type="datetime" />
+    <Property Name="sync" Type="bit" />
+    <Property Name="receiver_pay_code" Type="smallint" />
+    <Property Name="promotion_cost" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="sync_kes" Type="bit" />
+    <Property Name="hight_value_cost" Type="decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="KEMModelStoreContainer">
+    <EntitySet Name="kem_gateway_reponse_log" EntityType="Self.kem_gateway_reponse_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kem_gateway_bill_status" EntityType="Self.kem_gateway_bill_status" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [kem_gateway_bill_status].[Id] AS [Id], 
+    [kem_gateway_bill_status].[so_van_don] AS [so_van_don], 
+    [kem_gateway_bill_status].[ma_trang_thai] AS [ma_trang_thai], 
+    [kem_gateway_bill_status].[ma_kh] AS [ma_kh], 
+    [kem_gateway_bill_status].[created] AS [created], 
+    [kem_gateway_bill_status].[ghi_chu] AS [ghi_chu], 
+    [kem_gateway_bill_status].[so_lan] AS [so_lan], 
+    [kem_gateway_bill_status].[sync] AS [sync], 
+    [kem_gateway_bill_status].[sync_ems] AS [sync_ems], 
+    [kem_gateway_bill_status].[sync_orc] AS [sync_orc], 
+    [kem_gateway_bill_status].[time_status] AS [time_status], 
+    [kem_gateway_bill_status].[sys_active] AS [sys_active], 
+    [kem_gateway_bill_status].[sys_delete] AS [sys_delete], 
+    [kem_gateway_bill_status].[sys_createdate] AS [sys_createdate], 
+    [kem_gateway_bill_status].[sys_updatedate] AS [sys_updatedate], 
+    [kem_gateway_bill_status].[sys_createby] AS [sys_createby], 
+    [kem_gateway_bill_status].[sys_updateby] AS [sys_updateby], 
+    [kem_gateway_bill_status].[type] AS [type], 
+    [kem_gateway_bill_status].[sync_kes] AS [sync_kes], 
+    [kem_gateway_bill_status].[ma_nv_nhan] AS [ma_nv_nhan], 
+    [kem_gateway_bill_status].[ma_nv_giao] AS [ma_nv_giao]
+    FROM [dbo].[kem_gateway_bill_status] AS [kem_gateway_bill_status]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="kem_gateway_cuoc_phi_log" EntityType="Self.kem_gateway_cuoc_phi_log" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [kem_gateway_cuoc_phi_log].[id] AS [id], 
+    [kem_gateway_cuoc_phi_log].[so_van_don] AS [so_van_don], 
+    [kem_gateway_cuoc_phi_log].[cuoc] AS [cuoc], 
+    [kem_gateway_cuoc_phi_log].[phi] AS [phi], 
+    [kem_gateway_cuoc_phi_log].[phi_vung_xa] AS [phi_vung_xa], 
+    [kem_gateway_cuoc_phi_log].[phi_kien_go] AS [phi_kien_go], 
+    [kem_gateway_cuoc_phi_log].[phi_kiem_dem] AS [phi_kiem_dem], 
+    [kem_gateway_cuoc_phi_log].[khoi_luong] AS [khoi_luong], 
+    [kem_gateway_cuoc_phi_log].[ma_kh] AS [ma_kh], 
+    [kem_gateway_cuoc_phi_log].[type] AS [type], 
+    [kem_gateway_cuoc_phi_log].[sync_status] AS [sync_status], 
+    [kem_gateway_cuoc_phi_log].[sync_orc] AS [sync_orc], 
+    [kem_gateway_cuoc_phi_log].[sys_createdate] AS [sys_createdate], 
+    [kem_gateway_cuoc_phi_log].[sync_kes] AS [sync_kes], 
+    [kem_gateway_cuoc_phi_log].[others_fee] AS [others_fee], 
+    [kem_gateway_cuoc_phi_log].[note] AS [note], 
+    [kem_gateway_cuoc_phi_log].[note_1] AS [note_1]
+    FROM [dbo].[kem_gateway_cuoc_phi_log] AS [kem_gateway_cuoc_phi_log]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="nc_bill" EntityType="Self.nc_bill" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [nc_bill].[Id] AS [Id], 
+    [nc_bill].[waybill_number] AS [waybill_number], 
+    [nc_bill].[ref_number] AS [ref_number], 
+    [nc_bill].[order_number_supper] AS [order_number_supper], 
+    [nc_bill].[customer_code] AS [customer_code], 
+    [nc_bill].[sender_province] AS [sender_province], 
+    [nc_bill].[sender_district] AS [sender_district], 
+    [nc_bill].[sender_ward] AS [sender_ward], 
+    [nc_bill].[sender_address] AS [sender_address], 
+    [nc_bill].[sender_contact] AS [sender_contact], 
+    [nc_bill].[sender_phone] AS [sender_phone], 
+    [nc_bill].[receiver_province] AS [receiver_province], 
+    [nc_bill].[receiver_district] AS [receiver_district], 
+    [nc_bill].[receiver_ward] AS [receiver_ward], 
+    [nc_bill].[receiver_address] AS [receiver_address], 
+    [nc_bill].[receiver_contact] AS [receiver_contact], 
+    [nc_bill].[receiver_phone] AS [receiver_phone], 
+    [nc_bill].[receiver_name] AS [receiver_name], 
+    [nc_bill].[cod] AS [cod], 
+    [nc_bill].[height] AS [height], 
+    [nc_bill].[length] AS [length], 
+    [nc_bill].[width] AS [width], 
+    [nc_bill].[no_parcels] AS [no_parcels], 
+    [nc_bill].[no_parcels_doc] AS [no_parcels_doc], 
+    [nc_bill].[weight] AS [weight], 
+    [nc_bill].[weight_conversion] AS [weight_conversion], 
+    [nc_bill].[cost] AS [cost], 
+    [nc_bill].[remark] AS [remark], 
+    [nc_bill].[remote_cost] AS [remote_cost], 
+    [nc_bill].[woodbaler_cost] AS [woodbaler_cost], 
+    [nc_bill].[double_check_cost] AS [double_check_cost], 
+    [nc_bill].[insurance_cost] AS [insurance_cost], 
+    [nc_bill].[other_cost] AS [other_cost], 
+    [nc_bill].[service] AS [service], 
+    [nc_bill].[payment_type] AS [payment_type], 
+    [nc_bill].[nv_nhan] AS [nv_nhan], 
+    [nc_bill].[shop_code] AS [shop_code], 
+    [nc_bill].[table] AS [table], 
+    [nc_bill].[sender_customer_code] AS [sender_customer_code], 
+    [nc_bill].[receiver_customer_code] AS [receiver_customer_code], 
+    [nc_bill].[customer_code_api] AS [customer_code_api], 
+    [nc_bill].[declare_value] AS [declare_value], 
+    [nc_bill].[order_type] AS [order_type], 
+    [nc_bill].[special_cost] AS [special_cost], 
+    [nc_bill].[sys_createdate] AS [sys_createdate], 
+    [nc_bill].[sys_updatedate] AS [sys_updatedate], 
+    [nc_bill].[sync] AS [sync], 
+    [nc_bill].[receiver_pay_code] AS [receiver_pay_code], 
+    [nc_bill].[promotion_cost] AS [promotion_cost], 
+    [nc_bill].[sync_kes] AS [sync_kes], 
+    [nc_bill].[hight_value_cost] AS [hight_value_cost]
+    FROM [dbo].[nc_bill] AS [nc_bill]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

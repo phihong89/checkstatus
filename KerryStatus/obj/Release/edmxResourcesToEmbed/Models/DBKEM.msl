@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KEMModelStoreContainer" CdmEntityContainer="KEMEntities">
+    <EntitySetMapping Name="kem_gateway_reponse_log">
+      <EntityTypeMapping TypeName="KEMModel.kem_gateway_reponse_log">
+        <MappingFragment StoreEntitySet="kem_gateway_reponse_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="so_van_don" ColumnName="so_van_don" />
+          <ScalarProperty Name="khoi_luong" ColumnName="khoi_luong" />
+          <ScalarProperty Name="cuoc" ColumnName="cuoc" />
+          <ScalarProperty Name="phi" ColumnName="phi" />
+          <ScalarProperty Name="ma_trang_thai" ColumnName="ma_trang_thai" />
+          <ScalarProperty Name="response_code" ColumnName="response_code" />
+          <ScalarProperty Name="time_status" ColumnName="time_status" />
+          <ScalarProperty Name="response_log" ColumnName="response_log" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="sys_createdate" ColumnName="sys_createdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kem_gateway_bill_status">
+      <EntityTypeMapping TypeName="KEMModel.kem_gateway_bill_status">
+        <MappingFragment StoreEntitySet="kem_gateway_bill_status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="so_van_don" ColumnName="so_van_don" />
+          <ScalarProperty Name="ma_trang_thai" ColumnName="ma_trang_thai" />
+          <ScalarProperty Name="ma_kh" ColumnName="ma_kh" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="ghi_chu" ColumnName="ghi_chu" />
+          <ScalarProperty Name="so_lan" ColumnName="so_lan" />
+          <ScalarProperty Name="sync" ColumnName="sync" />
+          <ScalarProperty Name="sync_ems" ColumnName="sync_ems" />
+          <ScalarProperty Name="sync_orc" ColumnName="sync_orc" />
+          <ScalarProperty Name="time_status" ColumnName="time_status" />
+          <ScalarProperty Name="sys_active" ColumnName="sys_active" />
+          <ScalarProperty Name="sys_delete" ColumnName="sys_delete" />
+          <ScalarProperty Name="sys_createdate" ColumnName="sys_createdate" />
+          <ScalarProperty Name="sys_updatedate" ColumnName="sys_updatedate" />
+          <ScalarProperty Name="sys_createby" ColumnName="sys_createby" />
+          <ScalarProperty Name="sys_updateby" ColumnName="sys_updateby" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="sync_kes" ColumnName="sync_kes" />
+          <ScalarProperty Name="ma_nv_nhan" ColumnName="ma_nv_nhan" />
+          <ScalarProperty Name="ma_nv_giao" ColumnName="ma_nv_giao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kem_gateway_cuoc_phi_log">
+      <EntityTypeMapping TypeName="KEMModel.kem_gateway_cuoc_phi_log">
+        <MappingFragment StoreEntitySet="kem_gateway_cuoc_phi_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="so_van_don" ColumnName="so_van_don" />
+          <ScalarProperty Name="cuoc" ColumnName="cuoc" />
+          <ScalarProperty Name="phi" ColumnName="phi" />
+          <ScalarProperty Name="phi_vung_xa" ColumnName="phi_vung_xa" />
+          <ScalarProperty Name="phi_kien_go" ColumnName="phi_kien_go" />
+          <ScalarProperty Name="phi_kiem_dem" ColumnName="phi_kiem_dem" />
+          <ScalarProperty Name="khoi_luong" ColumnName="khoi_luong" />
+          <ScalarProperty Name="ma_kh" ColumnName="ma_kh" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="sync_status" ColumnName="sync_status" />
+          <ScalarProperty Name="sync_orc" ColumnName="sync_orc" />
+          <ScalarProperty Name="sys_createdate" ColumnName="sys_createdate" />
+          <ScalarProperty Name="sync_kes" ColumnName="sync_kes" />
+          <ScalarProperty Name="others_fee" ColumnName="others_fee" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="note_1" ColumnName="note_1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nc_bill">
+      <EntityTypeMapping TypeName="KEMModel.nc_bill">
+        <MappingFragment StoreEntitySet="nc_bill">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="waybill_number" ColumnName="waybill_number" />
+          <ScalarProperty Name="ref_number" ColumnName="ref_number" />
+          <ScalarProperty Name="order_number_supper" ColumnName="order_number_supper" />
+          <ScalarProperty Name="customer_code" ColumnName="customer_code" />
+          <ScalarProperty Name="sender_province" ColumnName="sender_province" />
+          <ScalarProperty Name="sender_district" ColumnName="sender_district" />
+          <ScalarProperty Name="sender_ward" ColumnName="sender_ward" />
+          <ScalarProperty Name="sender_address" ColumnName="sender_address" />
+          <ScalarProperty Name="sender_contact" ColumnName="sender_contact" />
+          <ScalarProperty Name="sender_phone" ColumnName="sender_phone" />
+          <ScalarProperty Name="receiver_province" ColumnName="receiver_province" />
+          <ScalarProperty Name="receiver_district" ColumnName="receiver_district" />
+          <ScalarProperty Name="receiver_ward" ColumnName="receiver_ward" />
+          <ScalarProperty Name="receiver_address" ColumnName="receiver_address" />
+          <ScalarProperty Name="receiver_contact" ColumnName="receiver_contact" />
+          <ScalarProperty Name="receiver_phone" ColumnName="receiver_phone" />
+          <ScalarProperty Name="receiver_name" ColumnName="receiver_name" />
+          <ScalarProperty Name="cod" ColumnName="cod" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="no_parcels" ColumnName="no_parcels" />
+          <ScalarProperty Name="no_parcels_doc" ColumnName="no_parcels_doc" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="weight_conversion" ColumnName="weight_conversion" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="remote_cost" ColumnName="remote_cost" />
+          <ScalarProperty Name="woodbaler_cost" ColumnName="woodbaler_cost" />
+          <ScalarProperty Name="double_check_cost" ColumnName="double_check_cost" />
+          <ScalarProperty Name="insurance_cost" ColumnName="insurance_cost" />
+          <ScalarProperty Name="other_cost" ColumnName="other_cost" />
+          <ScalarProperty Name="service" ColumnName="service" />
+          <ScalarProperty Name="payment_type" ColumnName="payment_type" />
+          <ScalarProperty Name="nv_nhan" ColumnName="nv_nhan" />
+          <ScalarProperty Name="shop_code" ColumnName="shop_code" />
+          <ScalarProperty Name="table" ColumnName="table" />
+          <ScalarProperty Name="sender_customer_code" ColumnName="sender_customer_code" />
+          <ScalarProperty Name="receiver_customer_code" ColumnName="receiver_customer_code" />
+          <ScalarProperty Name="customer_code_api" ColumnName="customer_code_api" />
+          <ScalarProperty Name="declare_value" ColumnName="declare_value" />
+          <ScalarProperty Name="order_type" ColumnName="order_type" />
+          <ScalarProperty Name="special_cost" ColumnName="special_cost" />
+          <ScalarProperty Name="sys_createdate" ColumnName="sys_createdate" />
+          <ScalarProperty Name="sys_updatedate" ColumnName="sys_updatedate" />
+          <ScalarProperty Name="sync" ColumnName="sync" />
+          <ScalarProperty Name="receiver_pay_code" ColumnName="receiver_pay_code" />
+          <ScalarProperty Name="promotion_cost" ColumnName="promotion_cost" />
+          <ScalarProperty Name="sync_kes" ColumnName="sync_kes" />
+          <ScalarProperty Name="hight_value_cost" ColumnName="hight_value_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

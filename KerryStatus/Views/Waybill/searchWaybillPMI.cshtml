@@ -1,0 +1,26 @@
+﻿@model List<KerryStatus.Models.KEM.kem_gateway_k_waybill>
+
+@{
+    ViewBag.Title = "searchWaybillPMI";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("ViewWaybill", "Waybill", FormMethod.Post))
+    {
+        <form>
+            <div class="form-group">
+                <label for="waybill_number">Waybill Number</label>
+                <input type="text" class="form-control" id="idWaybill" aria-describedby="emailHelp" placeholder="Enter waybill number">
+                <small id="emailHelp" class="form-text text-muted">Nhập số vận đơn cần cập nhập.</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    }
+
+</body>
+</html>

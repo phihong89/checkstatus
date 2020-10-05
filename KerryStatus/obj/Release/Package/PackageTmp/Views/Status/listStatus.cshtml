@@ -1,0 +1,44 @@
+﻿@model List<KerryStatus.Models.KEM.kem_gateway_bill_status>
+@{
+    ViewBag.Title = "listStatus";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> So van don </td>
+                        <td> Ma khach hang </td>
+                        <td> Ma trang thai </td>
+                        <td> Thoi gian cua Trang Thai </td>
+                        <td> Thoi gian khoi tao trang thai </td>
+                        <td> Dong bo qua khach hang </td>
+                        <td> Nguoi tao </td>
+                        <td> Chi tiet don hang </td>
+
+                    </tr>
+                    @*@foreach (var item in Model)
+                    {
+                        <tr>
+                            <td> @item.so_van_don </td>
+                            <td> @item.ma_kh </td>
+                            <td> @item.ma_trang_thai </td>
+                            <td> @item.time_status </td>
+                            <td> @item.sys_createdate </td>
+                            <td> @item.sys_updatedate </td>
+                            <td> @item.sys_createby </td>
+                            <td> @Url.Action("ShowWaybill","nc_bill", new { id = item.so_van_don })Detail </td>
+                        </tr>
+                    }*@
+                    @Html.Action("_PartialListStatus","Status")
+                </tbody>
+
+            </table>
+        </div>
+    </body>
+    </html>

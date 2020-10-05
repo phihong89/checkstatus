@@ -1,0 +1,20 @@
+﻿@model List<KerryStatus.Models.KEM.kem_gateway_bill_status>
+
+@{
+    ViewBag.Title = "_PartialListStatus";
+}
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td> @item.so_van_don </td>
+        <td> @item.ma_kh </td>
+        <td> @item.ma_trang_thai </td>
+        <td> @item.time_status.ToString() </td>
+        <td> @item.sys_createdate.ToString() </td>
+        <td> @item.sys_updatedate.ToString() </td>
+        <td> @item.sys_createby </td>
+        <td> @item.ghi_chu </td>
+        @*<td> <a href=" @Url.Action("ShowWaybill", "nc_bill", new { id = item.so_van_don })"> Detail</a> </td>*@
+    </tr>
+}

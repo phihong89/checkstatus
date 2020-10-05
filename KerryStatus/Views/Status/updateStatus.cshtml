@@ -1,0 +1,85 @@
+﻿@using KerryStatus.Models
+@*@model KerryStatus.Models.KEM.kem_gateway_bill_status*@
+@model KerryStatus.Models.KEM.recordStaffBill
+@{
+    ViewBag.Title = "updateStatus";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Update Bill Status</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("updateBillStatus", "Status", FormMethod.Post))
+        {
+        <div class="col-12 text-center">
+            <div>
+                @{ var data = ViewBag.Message;
+
+                }
+                @*<h2 style="font-size: 24px; color: darkorange;"> Số vận đơn</h2>*@
+                <br />
+                <label style="font-size: 22px; color: black;">@Model.so_bill</label>
+                <input type="hidden" name="txtSoVanDon" value="@Model.so_bill" />
+                @*<h2>@Model.so_bill</h2>*@
+                @*@Html.TextBoxFor(x => x.so_bill)*@
+                @*@Html.TextBox("txtSoVanDon", Model.so_bill, new { @readonly = "readonly" })*@
+                @*@Html.Label("txtSoVanDon", Model.so_bill)*@
+            </div>
+            <div>
+                @*<input type="submit" />*@
+                @*<input type="submit"  name="TimKiem" value="Tìm kiếm" />*@
+                <input type="submit" class="btn btn-success" name="onPUP" value="Thành công" onclick="location.href='@Url.Action("updateBillStatus", "Status")'" />
+                <input type="submit" class="btn btn-warning" name="onPUX" value="Thất bại" onclick="location.href='@Url.Action("updateBillStatus", "Status")'" />
+                @*<span style="font-size: 20PX;font-weight: bold; color: darkorange; background-color: black"> <input class="form-control center-block" type="submit" name="TimKiem" value="Tìm kiếm" /> </span>*@
+
+            </div>
+            <div>
+                <h2 style="font-size: 16px; color: black;"> Địa chỉ nhận hàng: @Html.Label("txtDiaChi", Model.sender_address, new { @readonly = "readonly" })</h2>
+                @*@Html.TextBox("txtDiaChi", Model.so_bill, new { @readonly = "readonly" })*@
+            </div>
+            <div>
+                <h2 style="font-size: 16px; color: black;"> Người liên hệ: @Html.Label("txtDiaChi", Model.sender_contact, new { @readonly = "readonly" })</h2>
+                @*@Html.TextBox("txtDiaChi", Model.so_bill, new { @readonly = "readonly" })*@
+            </div>
+            <div>
+                <h2 style="font-size: 16px; color: black;"> Điện thoại liên hệ: @Html.Label("txtDiaChi", Model.sender_phone, new { @readonly = "readonly" })</h2>
+                @*@Html.TextBox("txtDiaChi", Model.so_bill, new { @readonly = "readonly" })*@
+            </div>
+            <div>
+                <h2 style="font-size: 24px; color: darkorange;"> Nhân viên nhận</h2>
+                @*<h2>@Model.so_bill</h2>*@
+                @*@Html.TextBoxFor(x => x.so_bill)*@
+                @Html.TextBox("txtMaNV", Model.ma_nv_nhan)
+                @*@Html.TextBox("txtMaNV", Model.ma_nv_nhan, new { @readonly = "readonly" })*@
+            </div>
+            <div>
+                <h2 style="font-size: 24px; color: darkorange;"> Lý do thất bại</h2>
+                @*<h2>@Model.so_bill</h2>*@
+                @*@Html.TextBoxFor(x => x.so_bill)*@
+                @Html.TextBox("txtLyDo", Model.ly_do)
+            </div>
+            @*<div>
+            <p> Thời gian trạng thái.</p>
+            @Html.TextBoxFor(x => x.time_status)
+        </div>*@
+            @*@Model.so_van_don = @data.so_bill
+        @Model.time_status = @DateTime.Now
+        @Model.sync = 0
+        @Model.so_lan = 0*@
+            <br />
+
+            <div>
+                @*<input type="submit" />*@
+                @*<input type="submit"  name="TimKiem" value="Tìm kiếm" />*@
+                <input type="submit" class="btn btn-success" name="onPUP" value="Thành công" onclick="location.href='@Url.Action("updateBillStatus", "Status")'" />
+                <input type="submit" class="btn btn-warning" name="onPUX" value="Thất bại" onclick="location.href='@Url.Action("updateBillStatus", "Status")'" />
+                @*<span style="font-size: 20PX;font-weight: bold; color: darkorange; background-color: black"> <input class="form-control center-block" type="submit" name="TimKiem" value="Tìm kiếm" /> </span>*@
+
+            </div>
+        </div>
+        }
+    </div>
+</body>
+</html>

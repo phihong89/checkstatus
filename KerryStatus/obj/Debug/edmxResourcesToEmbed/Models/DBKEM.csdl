@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KEMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="kem_gateway_reponse_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="so_van_don" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="khoi_luong" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="cuoc" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="phi" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ma_trang_thai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="response_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="time_status" Type="DateTime" Precision="3" />
+    <Property Name="response_log" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sys_createdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="kem_gateway_bill_status">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="so_lan" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="so_van_don" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ma_trang_thai" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ma_kh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="created" Type="DateTime" Precision="3" />
+    <Property Name="ghi_chu" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="so_lan" Type="Int32" Nullable="false" />
+    <Property Name="sync" Type="Int32" />
+    <Property Name="sync_ems" Type="Int32" />
+    <Property Name="sync_orc" Type="Int32" />
+    <Property Name="time_status" Type="DateTime" Precision="3" />
+    <Property Name="sys_active" Type="Boolean" />
+    <Property Name="sys_delete" Type="Boolean" />
+    <Property Name="sys_createdate" Type="DateTime" Precision="3" />
+    <Property Name="sys_updatedate" Type="DateTime" Precision="3" />
+    <Property Name="sys_createby" Type="Int32" />
+    <Property Name="sys_updateby" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="sync_kes" Type="Int32" />
+    <Property Name="ma_nv_nhan" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ma_nv_giao" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="kem_gateway_cuoc_phi_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="so_van_don" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="cuoc" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="phi" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="phi_vung_xa" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="phi_kien_go" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="phi_kiem_dem" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="khoi_luong" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ma_kh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="sync_status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sync_orc" Type="Int32" />
+    <Property Name="sys_createdate" Type="DateTime" Precision="3" />
+    <Property Name="sync_kes" Type="Int32" />
+    <Property Name="others_fee" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="note_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="nc_bill">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="waybill_number" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="waybill_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ref_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="order_number_supper" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="customer_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sender_province" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="sender_district" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sender_ward" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sender_address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sender_contact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sender_phone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_province" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_district" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_ward" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_contact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="cod" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="height" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="length" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="width" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="no_parcels" Type="Int32" />
+    <Property Name="no_parcels_doc" Type="Int32" />
+    <Property Name="weight" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="weight_conversion" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="cost" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="remark" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="remote_cost" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="woodbaler_cost" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="double_check_cost" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="insurance_cost" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="other_cost" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="service" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="payment_type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="nv_nhan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="shop_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="table" Type="Int16" />
+    <Property Name="sender_customer_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="receiver_customer_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="customer_code_api" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="declare_value" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="order_type" Type="Int16" />
+    <Property Name="special_cost" Type="Int16" />
+    <Property Name="sys_createdate" Type="DateTime" Precision="3" />
+    <Property Name="sys_updatedate" Type="DateTime" Precision="3" />
+    <Property Name="sync" Type="Boolean" />
+    <Property Name="receiver_pay_code" Type="Int16" />
+    <Property Name="promotion_cost" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="sync_kes" Type="Boolean" />
+    <Property Name="hight_value_cost" Type="Decimal" Precision="10" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="KEMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="kem_gateway_reponse_log" EntityType="Self.kem_gateway_reponse_log" />
+    <EntitySet Name="kem_gateway_bill_status" EntityType="Self.kem_gateway_bill_status" />
+    <EntitySet Name="kem_gateway_cuoc_phi_log" EntityType="Self.kem_gateway_cuoc_phi_log" />
+    <EntitySet Name="nc_bill" EntityType="Self.nc_bill" />
+  </EntityContainer>
+</Schema>
